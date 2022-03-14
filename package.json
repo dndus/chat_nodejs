@@ -4,7 +4,8 @@
   "description": "Realtime chat app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src",
     "dev": "nodemon server"
   },
   "author": "dndus",
@@ -12,6 +13,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "moment": "^2.29.1",
+    "netlify-lambda": "^2.0.15",
     "socket.io": "^4.4.1"
   },
   "devDependencies": {
